@@ -1,0 +1,23 @@
+services:
+  solana:
+    restart: unless-stopped
+    image: bitcart/bitcart-sol:stable
+    environment:
+      SOL_NETWORK: ${SOL_NETWORK:-mainnet}
+      SOL_SERVER: ${SOL_SERVER:-}
+      SOL_DEBUG: ${SOL_DEBUG:-false}
+      SOL_TX_SPEED: ${SOL_TX_SPEED:-network}
+      SOL_MAX_SYNC_HOURS: ${SOL_MAX_SYNC_HOURS:-1}
+    expose:
+      - "5012"
+    volumes:
+      - "solana_datadir:/data"
+
+  backend:
+    depends_on:
+      - solana
+    links:
+      - solana
+
+volumes:
+  solana_datadir:

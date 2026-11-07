@@ -23,5 +23,6 @@ MATIC_HOST=polygon
 TRX_HOST=tron
 GRS_HOST=groestlcoin
 XMR_HOST=monero
+SOL_HOST=solana
 EOF
 cd ../..

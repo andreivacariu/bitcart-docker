@@ -31,6 +31,7 @@ services:
       GRS_NETWORK: ${GRS_NETWORK:-mainnet}
       GRS_LIGHTNING: ${GRS_LIGHTNING:-false}
       XMR_NETWORK: ${XMR_NETWORK:-mainnet}
+      SOL_NETWORK: ${SOL_NETWORK:-mainnet}
       UPDATE_URL: ${BITCART_UPDATE_URL:-https://api.bitcart.ai/updates/latest}
       BITCART_BACKEND_ROOTPATH: ${BITCART_BACKEND_ROOTPATH:-}
       BITCART_BACKEND_PLUGINS_DIR: /plugins/backend

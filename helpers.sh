@@ -44,6 +44,7 @@ LTC_LIGHTNING=$LTC_LIGHTNING
 GRS_NETWORK=$GRS_NETWORK
 GRS_LIGHTNING=$GRS_LIGHTNING
 XMR_NETWORK=$XMR_NETWORK
+SOL_NETWORK=$SOL_NETWORK
 TOR_RELAY_NICKNAME=$TOR_RELAY_NICKNAME
 TOR_RELAY_EMAIL=$TOR_RELAY_EMAIL
 CLOUDFLARE_TUNNEL_TOKEN=$CLOUDFLARE_TUNNEL_TOKEN
@@ -63,6 +64,8 @@ $(env | awk -F "=" '{print "\n"$0}' | grep "BITCART_.*.*_SCALE")
 $(env | awk -F "=" '{print "\n"$0}' | grep "BITCART_.*.*_ROOTPATH")
 $(env | awk -F "=" '{print "\n"$0}' | grep ".*_SERVER")
 $(env | awk -F "=" '{print "\n"$0}' | grep ".*_DEBUG")
+$(env | awk -F "=" '{print "\n"$0}' | grep ".*_TX_SPEED")
+$(env | awk -F "=" '{print "\n"$0}' | grep ".*_MAX_SYNC_HOURS")
 $(env | awk -F "=" '{print "\n"$0}' | grep ".*_LIGHTNING_GOSSIP")
 EOF
 }
